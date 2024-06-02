@@ -20,12 +20,18 @@ const END_POINT = '/search/photos';
 //   });
 // }
 
-export const getPhotos = query => {
+export const userParams = {
+  page: 1,
+  searchQuery: null,
+  perPage: 6,
+};
+
+export const getPhotos = () => {
   return axios.get(`${END_POINT}`, {
     params: {
-      query,
-      page: 1,
-      per_page: 12,
+      query: userParams.searchQuery,
+      page: userParams.page,
+      per_page: userParams.perPage,
       orientation: 'portrait',
       client_id: API_KEY,
     },
