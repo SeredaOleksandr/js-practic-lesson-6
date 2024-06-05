@@ -23,7 +23,7 @@ const END_POINT = '/search/photos';
 export const userParams = {
   page: 1,
   searchQuery: null,
-  perPage: 6,
+  perPage: 12,
 };
 
 export const getPhotos = () => {
